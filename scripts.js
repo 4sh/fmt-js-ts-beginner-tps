@@ -14,11 +14,3 @@ class PokemonStats {
         this.#specialAttack = specialAttack;
     }
 }
-
-// Commented examples of PokemonStats instantiation that would throw exceptions:
-// the exception will be thrown when any of the parameters is missing but also if a negative or null value
-// is given to the constructor
-
-// new PokemonStats();
-// new PokemonStats(-1);
-// new PokemonStats(34, '');
