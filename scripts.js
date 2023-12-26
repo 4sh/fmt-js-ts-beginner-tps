@@ -15,8 +15,13 @@ async function getPokemon(id) {
         throw new Error('Pokemon was not found')
     }
 
+    if (id % 2 === 0) {
+        return await new Promise(resolve => setTimeout(() => resolve(response.json()), 2000));
+    }
+
     return response.json();
 }
 
-getPokemon(598).then(console.log);
-getPokemon(4318431).catch(console.log);
+const p1 = getPokemon(38);
+const p2 = getPokemon(261);
+const p3 = getPokemon(1303);
