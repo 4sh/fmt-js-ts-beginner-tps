@@ -1,9 +1,17 @@
-import {
-    generateRandomNickname,
-    Pokemon,
-    pokemonSpecies as trainerPokemonSpecies
-} from "pokemon";
+const resolvedPromiseCreatedUsingConstructor = /* TODO */;
+const rejectedPromiseCreatedUsingConstructor = /* TODO */;
+const resolvedPromiseCreatedUsingPromiseAPI = /* TODO */;
+const rejectedPromiseCreatedUsingPromiseAPI = /* TODO */;
 
-const myPokemons = trainerPokemonSpecies.map(species => new Pokemon(species, generateRandomNickname(species)));
+function printSquare(x) {
+    return console.log(x**2);
+}
 
-console.log(myPokemons);
+function printStringLength(str) {
+    return console.log(str.length);
+}
+
+resolvedPromiseCreatedUsingConstructor.then(printSquare);
+rejectedPromiseCreatedUsingConstructor.catch(printStringLength)
+resolvedPromiseCreatedUsingPromiseAPI.then(printSquare);
+rejectedPromiseCreatedUsingPromiseAPI.catch(printStringLength)
