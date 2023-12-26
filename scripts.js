@@ -1,17 +1,15 @@
-const resolvedPromiseCreatedUsingConstructor = new Promise((resolve, reject) => resolve(48));
-const rejectedPromiseCreatedUsingConstructor = new Promise((resolve, reject) => reject('rejectedPromiseCreatedUsingConstructor'))
-const resolvedPromiseCreatedUsingPromiseAPI = Promise.resolve(96);
-const rejectedPromiseCreatedUsingPromiseAPI = Promise.reject('rejectedPromiseCreatedUsingPromiseAPI');
+function buildRandomPromise() {
+    return new Promise((resolve, reject) => {
+        const randomNumber = Math.random();
+        if(randomNumber > 0.5) {
+            reject(`Oh no, the number ${randomNumber} is too high`);
+        }
 
-function printSquare(x) {
-    return console.log(x**2);
+        resolve(randomNumber);
+    });
 }
 
-function printStringLength(str) {
-    return console.log(str.length);
+for (let i = 0; i < 10; ++i) {
+    buildRandomPromise()
 }
 
-resolvedPromiseCreatedUsingConstructor.then(printSquare); // Displays 2304
-rejectedPromiseCreatedUsingConstructor.catch(printStringLength) // Displays 38
-resolvedPromiseCreatedUsingPromiseAPI.then(printSquare); // Displays 9216
-rejectedPromiseCreatedUsingPromiseAPI.catch(printStringLength) // Displays 37
