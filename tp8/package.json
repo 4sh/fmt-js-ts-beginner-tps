@@ -1,0 +1,10 @@
+{
+  "name": "tp8",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "author": "4SH",
+  "devDependencies": {
+    "typescript": "5.3.3"
+  }
+}
