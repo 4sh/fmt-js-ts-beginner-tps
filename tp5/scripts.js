@@ -2,7 +2,7 @@ import {
     generateRandomNickname,
     Pokemon,
     pokemonSpecies as trainerPokemonSpecies
-} from "./folder/otherFolder/anotherFolder/deepFolder/pokemon.js";
+} from "pokemon";
 
 const myPokemons = trainerPokemonSpecies.map(species => new Pokemon(species, generateRandomNickname(species)));
 
