@@ -19,11 +19,11 @@ function showPokemon(predicate) {
 }
 
 function findPokemonById() {
-  const id = document.querySelector("input")?.value;
+  const id = document.querySelector("input").value;
   showPokemon(pokemon => pokemon.id === id);
 }
 function findPokemonByName() {
-  const name = document.querySelector("input")?.value;
+  const name = document.querySelector("input").value;
   showPokemon(pokemon => pokemon.name.toLowerCase() === name?.toLowerCase());
 }
 
