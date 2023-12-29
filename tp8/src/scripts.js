@@ -1,6 +1,6 @@
 
 async function loadPokemons() {
-    return await fetch("/data/pokemons.json").then(resp => resp.json())
+    return await fetch("/tp8/data/pokemons.json").then(resp => resp.json())
 }
 
 function showPokemon(predicate) {
