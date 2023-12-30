@@ -1,6 +1,8 @@
 
 async function loadPokemons() {
-    return await fetch("/tp8/data/pokemons.json").then(resp => resp.json())
+  // Context starts from index.html (from where current script is imported)
+  const TP_ROOT_PATH = `./`
+  return await fetch(`${TP_ROOT_PATH}data/pokemons.json`).then(resp => resp.json())
 }
 
 function showPokemon(predicate) {
