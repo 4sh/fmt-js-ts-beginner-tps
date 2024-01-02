@@ -25,3 +25,8 @@ async function getPokemon(id) {
 const p1 = getPokemon(38);
 const p2 = getPokemon(261);
 const p3 = getPokemon(1303);
+
+Promise.all([p1, p2]).then(values => console.log('Total height: ' + (values[0].height + values[1].height))); // Displays: 16
+Promise.any([p3, p1]).then(value => console.log('any name: ' + value.name)); // Displays: ninetales
+Promise.race([p1, p2]).then(value => console.log('race name: ' + value.name)); // Dipslays: race name: poochyena
+
