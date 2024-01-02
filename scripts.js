@@ -1,12 +1,10 @@
-function buildRandomPromise() {
-    return new Promise((resolve, reject) => {
-        const randomNumber = Math.random();
-        if(randomNumber > 0.5) {
-            reject(`Oh no, the number ${randomNumber} is too high`);
-        }
+async function buildRandomPromise() {
+    const randomNumber = Math.random();
+    if(randomNumber > 0.5) {
+        throw Error(`Oh no, the number ${randomNumber} is too high`);
+    }
 
-        resolve(randomNumber);
-    });
+    return randomNumber;
 }
 
 function main() {
