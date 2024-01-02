@@ -11,5 +11,8 @@ function buildRandomPromise() {
 
 for (let i = 0; i < 10; ++i) {
     buildRandomPromise()
+        .then(n => console.log(n))
+        .catch((reason) => console.log('Promise was rejected: ' + reason))
+        .finally(() => console.log('Random promise terminated'))
 }
 
