@@ -7,17 +7,18 @@ async function buildRandomPromise() {
     return randomNumber;
 }
 
-function main() {
+async function main() {
     for (let i = 0; i < 10; ++i) {
-        buildRandomPromise()
-            .then(n => n + 1)
-            .then(n => n * 2)
-            .then(n => console.log(n))
-            .catch((reason) => console.log('Promise was rejected: ' + reason))
-            .finally(() => console.log('Random promise terminated'))
+        try {
+            const randomNumber = await buildRandomPromise();
+            console.log((randomNumber + 1) * 2);
+        } catch(error) {
+            console.log(error.message);
+        } finally {
+            console.log('Random promise terminated')
+        }
     }
 }
 
-main()
-
+main();
 
