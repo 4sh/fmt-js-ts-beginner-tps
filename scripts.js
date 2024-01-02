@@ -29,3 +29,10 @@ console.log(vulpix.nickname)
 
 vulpix.rename2('Lil arrow fox');
 console.log(vulpix.nickname)
+
+Object.freeze(vulpix);
+vulpix.nickname = 'new nickname';
+vulpix.stats["special attack"] = 12;
+
+console.log(vulpix.nickname);
+console.log(vulpix.stats["special attack"]);
