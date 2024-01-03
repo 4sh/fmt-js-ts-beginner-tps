@@ -17,3 +17,5 @@ function generateRandomNickname(species) {
 
     return prefix + ' ' + species;
 }
+
+export { Pokemon, pokemonSpecies, generateRandomNickname };
