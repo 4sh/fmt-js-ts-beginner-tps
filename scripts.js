@@ -5,3 +5,9 @@ function onResetButtonClick() {
 function onNumberInputClick() {
     console.log('Number input was clicked!');
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const numberInputElement = document.getElementById('numberInput');
+    numberInputElement.addEventListener('click', onNumberInputClick);
+})
