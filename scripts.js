@@ -1,4 +1,7 @@
-document.getElementById('numberInput');
-document.getElementsByName('numberInput');
-document.querySelector('h1.title');
-document.querySelectorAll('.title');
+function onResetButtonClick() {
+    console.log('Reset button was clicked!');
+}
+
+function onNumberInputClick() {
+    console.log('Number input was clicked!');
+}
