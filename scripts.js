@@ -1,16 +1,9 @@
-function onResetButtonClick() {
-    console.log('Reset button was clicked!');
+function computeSquare(x) {
+    return Number(x**2);
 }
 
-function onNumberInputClick() {
-    console.log('Number input was clicked!');
-}
-
+const squareIsBiggerThanOneThousandMessage = 'Le carré du nombre est plus grand que 1000 !';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const numberInputElement = document.getElementById('numberInput');
-    numberInputElement.addEventListener('click', onNumberInputClick);
-    numberInputElement.addEventListener('change', () => {
-        console.log(`New value: ${numberInputElement.value}`);
-    })
+
 })
