@@ -10,4 +10,7 @@ function onNumberInputClick() {
 document.addEventListener("DOMContentLoaded", () => {
     const numberInputElement = document.getElementById('numberInput');
     numberInputElement.addEventListener('click', onNumberInputClick);
+    numberInputElement.addEventListener('change', () => {
+        console.log(`New value: ${numberInputElement.value}`);
+    })
 })
