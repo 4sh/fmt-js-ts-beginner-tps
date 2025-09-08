@@ -1,10 +1,5 @@
 const numbers = [12, 1, 96, 5, 45];
 
-// Using a for loop
-let sum = 0;
-
-for(let n of numbers) {
-    sum += n;
-}
-
+// Using reduce() API
+const sum = numbers.reduce((accumulator, num) => accumulator + num, 0);
 console.log(sum);
