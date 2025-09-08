@@ -14,6 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
     numberInputElement.addEventListener('change', () => {
         const square = computeSquare(numberInputElement.value);
         updateSquareValue(square);
+
+        const squareWarningElement = document.getElementById(squareIsBiggerThanOneThousandMessageId);
+
+        if (square >= 1000) {
+            if (!squareWarningElement) {
+                const newSquareWarningElement = document.createElement('div');
+                newSquareWarningElement.id = squareIsBiggerThanOneThousandMessageId;
+                newSquareWarningElement.innerText = squareIsBiggerThanOneThousandMessage;
+
+                document.querySelector('body').appendChild(newSquareWarningElement);
+            }
+        } else {
+            if (squareWarningElement) {
+                squareWarningElement.remove();
+            }
+        }
     })
     document.getElementById('resetButton').addEventListener('click', () => {
         numberInputElement.value = 0;
